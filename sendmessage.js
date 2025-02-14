@@ -5,6 +5,22 @@
   let channelId = cid
   // or let channelId = api.getConfig().channelId
 
-  // Send a message
-  let sentMessage = await api.sendMessage(channelId, `ok`)
+  async function sendHighlow() {
+    while (true) {
+        await api.sendMessage(channelId, "p!highlow");
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      await api.sendMessage(channelId, "lower");
+        await new Promise(resolve => setTimeout(resolve, 31000));
+    }
+}
+
+async function sendWork() {
+    while (true) {
+        await api.sendMessage(channelId, "p!work");
+        await new Promise(resolve => setTimeout(resolve, 65000));
+    }
+}
+// Run both functions simultaneously
+sendHighlow();
+sendWork();
 }
