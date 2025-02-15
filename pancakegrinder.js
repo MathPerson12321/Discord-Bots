@@ -18,17 +18,16 @@
         sendDep();
         await new Promise(resolve => setTimeout(resolve, 31000));
     }
-}
 
-async function sendWork() {
-    while (true) {
-        await api.sendMessage(channelId, "p!work");
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        sendDep();
-        await new Promise(resolve => setTimeout(resolve, 65000));
-    }
-}
-// Run both functions simultaneously
-sendHighlow();
-sendWork();
+  async function sendWork() {
+      while (true) {
+          await api.sendMessage(channelId, "p!work");
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          sendDep();
+          await new Promise(resolve => setTimeout(resolve, 65000));
+      }
+  }
+  // Run both functions simultaneously
+  sendHighlow();
+  sendWork();
 }
