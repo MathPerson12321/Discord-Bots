@@ -1,6 +1,6 @@
-let channelId = "1324236881474617470"; // Replace with the target channel ID
+let channelId = "1324236881474617470"; // Replace with the target channel ID - example
 let emoji = "😀"; // Replace with your desired emoji
-let token = "MTE3ODEyODkzMjI5NDM4MTcxOQ.GMJbEZ.voHaXN6ha8q_1hE9nAMInEcvGsPUbE2Qc_u4zE"; // Replace with your Discord token
+let token = "Token"; // Replace with your Discord token
 
 // Function to react to a message
 async function reactToMessage(messageId) {
