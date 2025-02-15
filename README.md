@@ -1,5 +1,5 @@
 <p align="center">
-#[Discord] - Pancake Grinder and More!</h1>
+# [Discord] - Pancake Grinder and More!</h1>
 
 These are some templates to grind the Pancake bot and do more, adapt them to your liking! Just paste index.js in devtools, send a message, and then paste the code (make sure to adapt the fields).
 
