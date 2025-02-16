@@ -18,6 +18,7 @@
         sendDep();
         await new Promise(resolve => setTimeout(resolve, 31000));
     }
+  }
 
   async function sendWork() {
       while (true) {
@@ -28,11 +29,11 @@
       }
   }
 
-    async function sendTrivia() {
+async function sendTrivia() {
       while (true) {
           await api.sendMessage(channelId, "p!trivia hard");
           await new Promise(resolve => setTimeout(resolve, 1000));
-          await api.sendMessage(channelId, "4");
+          await api.sendMessage(channelId, "2");
           await new Promise(resolve => setTimeout(resolve, 1000));
           sendDep();
           await new Promise(resolve => setTimeout(resolve, 650000));
