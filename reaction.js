@@ -18,7 +18,7 @@
   "🖤", "🤍", "💯", "💢", "💥", "💫", "💦", "💨", "🕳️", "💬", 
   "👁️‍🗨️", "🗨️", "🗯️", "💭", "💤"];
 ; // Replace with your desired emoji
-    let token = "MTE3ODEyODkzMjI5NDM4MTcxOQ.GfKfjS.JLRTflI-g2Vpohm34oRsqt-Uut4qAS_9S9nKhE"; // Replace with your Discord token
+    let token = "Token"; // Replace with your Discord token
     
     // Function to react to a message
     async function reactToMessage(messageId) {
