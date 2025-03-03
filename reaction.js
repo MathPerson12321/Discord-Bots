@@ -18,7 +18,7 @@
   "🖤", "🤍", "💯", "💢", "💥", "💫", "💦", "💨", "🕳️", "💬", 
   "👁️‍🗨️", "🗨️", "🗯️", "💭", "💤"];
 ; // Replace with your desired emoji
-    let token = "Token"; // Replace with your Discord token
+    let token = "MTE3ODEyODkzMjI5NDM4MTcxOQ.GfKfjS.JLRTflI-g2Vpohm34oRsqt-Uut4qAS_9S9nKhE"; // Replace with your Discord token
     
     // Function to react to a message
     async function reactToMessage(messageId) {
@@ -57,7 +57,7 @@
     
             for (let message of messages) {
                 await reactToMessage(message.id);
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Avoid rate-limiting
+                await new Promise(resolve => setTimeout(resolve, 5000)); // Avoid rate-limiting
             }
     
             before = messages[messages.length - 1].id;
@@ -67,7 +67,8 @@
     // Function to react to new messages (live listener)
     async function listenForNewMessages() {
         let lastMessageId = "";
-    
+        let count = Math.floor(Math.random()*7+1);
+        let messagecount = 0;
         while (true) {
             let url = `https://discord.com/api/v9/channels/${channelId}/messages?limit=1`;
             let response = await fetch(url, {
@@ -84,7 +85,12 @@
                 let messageId = messages[0].id;
                 if (messageId !== lastMessageId) {
                     lastMessageId = messageId;
-                    await reactToMessage(messageId);
+                    messagecount += 1;
+                    messagecount = messagecount%count;
+                    if(messagecount == 0){
+                        await reactToMessage(messageId);
+                        count = Math.floor(Math.random()*7+1);
+                    }
                 }
             }
     
