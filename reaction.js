@@ -22,7 +22,7 @@
     
     // Function to react to a message
     async function reactToMessage(messageId) {
-        const randomIndex = Math.floor(Math.random() * arr.length);
+        const randomIndex = Math.floor(Math.random() * emojis.length);
         let url = `https://discord.com/api/v9/channels/${channelId}/messages/${messageId}/reactions/${encodeURIComponent(emojis[randomIndex])}/@me`;
         await fetch(url, {
             method: "PUT",
